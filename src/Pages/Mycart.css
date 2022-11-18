@@ -1,29 +1,78 @@
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .card-contr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .card-bottom {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .remove {
+    width: 100% !important;
+    margin-top: 2em !important;
+  }
+
+
+  .img-cntr {
+    width: 90% !important;
+  }
+
+  .left-contr {
+
+    width: 50% !important;
+  }
+
+  .right-cntr {
+    width: 50% !important;
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: red; */
+  }
+
+  .main-price-cnt {
+    width: 100% !important;
+    margin-top: 1.5em !important;
+  }
+
+  .price-contr {
+    width: 100% !important;
+  }
+}
+
 .main-contr {
   display: flex;
-  /* background-color: red; */
+  width: 90%;
+  /* background-color: green; */
 }
 
 .left-contr {
-  /* background-color: green; */
+  /* background-color: red; */
   width: 60%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .card-contr {
+  margin: 1.5em;
   background: #ffffff;
   padding: 1em;
-  /* background-color: yellow; */
   width: 75%;
-  height: 70%;
   display: flex;
 }
 
 .img-cntr {
   width: 20%;
-  /* padding: 1em; */
   margin: 0.5em;
-  /* background-color: pink; */
 }
 
 .contents {
@@ -40,31 +89,31 @@
   margin-right: 1em !important;
 }
 
-.text-price{
+.text-price {
   font-family: "Roboto";
   font-size: 1.2em;
   font-weight: 600;
   line-height: 1.1em;
- text-align: left;
- margin-right: 0.4em;
-  }
-
-.total-price{
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 0.9em;
-text-decoration-line: line-through;
-color: rgba(11, 11, 18, 0.37);
-margin-right: 0.4em;
+  text-align: left;
+  margin-right: 0.4em;
 }
 
-.perc-price{
+.total-price {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 0.9em;
-color: #4CAF50;
+  text-decoration-line: line-through;
+  color: rgba(11, 11, 18, 0.37);
+  margin-right: 0.4em;
+}
+
+.perc-price {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9em;
+  color: #4CAF50;
 }
 
 .text {
@@ -76,33 +125,31 @@ color: #4CAF50;
   margin-top: -7%;
 }
 
-.text-qua{
+.text-qua {
   font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 1em;
-color: rgba(11, 11, 18, 0.87);
-margin-top: 17%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  color: rgba(11, 11, 18, 0.87);
+  margin-top: 17%;
 }
 
-.quantity-cntr{
+.quantity-cntr {
   display: flex;
-  }
+}
 
-.quantity-count{
+.quantity-count {
 
-  border: 1px solid black;
+  border: 1px solid rgb(195, 195, 195);
   margin-left: 1em !important;
   min-width: 5em;
-  padding: 0.3em;
   margin-top: 15%;
   display: flex;
   justify-content: space-between;
-  align-items:center ;
+  align-items: center;
 }
 
-.card-bottom{
-  /* background-color: red; */
+.card-bottom {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -110,53 +157,76 @@ margin-top: 17%;
 }
 
 
-.right-cntr{
+.right-cntr {
   width: 40%;
+  height: 40%;
 }
 
 
-.prd-img{
+.prd-img {
   width: 100%;
   height: 100%;
   border-radius: 0.5em;
 }
 
-.quantity{
+.quantity {
+  /* background-color: red; */
+  width: 50%;
+  text-align: center;
+  border-left: 1px solid rgb(195, 195, 195);
+  /* border-color: black !important; */
   /* margin: 1em; */
   /* padding: 1em; */
   /* border-left: 1px solid black !important; */
 }
 
-.remove{
+.minus{
+  color:red;
+}
+
+.plus{
+  color: #4CAF50;
+}
+
+.remove {
   width: 6.5em;
   height: 2.5em;
   background: rgba(74, 152, 43, 0.07);
   border: 0.5px solid #6CBF3C;
   border-radius: 0.2em;
-color: #6CBF3C;
-font-weight: 500;
-font-size: 0.7em;
-margin-top: 6%;
+  color: #6CBF3C;
+  font-weight: 500;
+  font-size: 0.7em;
+  margin-top: 6%;
 }
 
 
 
-.main-price-cntr{
+.main-price-cntr {
+  margin-top: 1.2em;
+  /* background-color: green; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
-.price-contr{
+
+.price-contr {
   padding: 1em;
   background-color: #ffffff;
-  width: 30%;
+  width: 50%;
 }
 
-.button-buy{
-  width: 100%;
-height: 2.5em;
-border: 0;
-outline: 0;
-background: #6CBF3C;
-color: white;
+.button-buy {
+  margin-top: 2em;
+  width: 55%;
+  height: 2.5em;
+  border: 0;
+  outline: 0;
+  background: #6CBF3C;
+  color: white;
+}
+
+.price-content{
+  display: flex;
+  justify-content: space-between;
 }
