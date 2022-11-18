@@ -116,18 +116,27 @@ export default function Mycart() {
   };
 
   const totalPriceCalculator=()=>{
-    let data=[...productData]
-    let d=[]
-   d= data.map((item,index)=>{
-      return item.quantity * item.price
-    })
+  //   let data=[...productData]
+  //   let d=[]
+  //  d= data.map((item,index)=>{
+  //     return item.quantity * item.price
+  //   })
 
-    sumCalculator(d)
+  //   sumCalculator(d)
   }
 
   const sumCalculator=(data)=>{
     const sum = data.reduce((partialSum, a) => partialSum + a, 0);
     setTotal(sum)
+
+  }
+
+  const removeHandler=(id)=>{
+    let data=[...productData]
+    let updated=data.filter((item,index)=>{
+      return item.id!==id
+    })
+    setProductData(updated)
 
   }
   return (
@@ -174,7 +183,7 @@ export default function Mycart() {
                       </span>
                     </div>
                   </div>
-                  <button className="remove">REMOVE</button>
+                  <button className="remove" onClick={()=>{removeHandler(item?.id)}}>REMOVE</button>
                 </div>
               </div>
             </div>
