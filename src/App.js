@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div style={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
-      <h3 style={{width:"90%"}}>
+      <h3 style={{width:"86%"}}>
       My cart (4)
       </h3>
       </div>

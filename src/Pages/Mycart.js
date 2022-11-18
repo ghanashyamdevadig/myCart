@@ -1,24 +1,26 @@
 import React from "react";
 import "./Mycart.css";
+import Images from '../Assests/images/boat rockerz.jpg'
+
 export default function Mycart() {
   return (
     <div className="main-contr">
       <div className="left-contr">
         <div className="card-contr">
           <div className="img-cntr">
-            <img className="prd-img" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWDy062qU6e3zKR3nua26l-uLJcg_MME2d8A&usqp=CAU"}/>
+            <img className="prd-img" src={Images}/>
           </div>
           <div className="contents">
-            <p className="text">item name</p>
+            <p className="text">boat rockerz 450 - bluetooth wireless on ear headphone with mic</p>
             <div>
-              <span className="text price">item price</span>
-              <span className="text price">item actual price</span>
-              <spam className="text price">item discout</spam>
+              <span className="text-price"> &#8377; 250</span>
+              <span className="total-price"> &#8377; 1010</span>
+              <spam className="perc-price">53%</spam>
             </div>
 
             <div className="card-bottom">
               <div className="quantity-cntr">
-                <span className="text">quantity</span>
+                <span className="text-qua">Quantity</span>
                 <div className="quantity-count">
                   <span className="quantity"> -</span>
                   <span className="quantity" >2</span>
@@ -27,7 +29,7 @@ export default function Mycart() {
 
                 
               </div>
-              <button className="remove">remove</button>
+              <button className="remove">REMOVE</button>
             </div>
           </div>
         </div>
