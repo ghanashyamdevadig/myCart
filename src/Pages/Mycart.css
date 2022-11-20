@@ -31,10 +31,9 @@
   }
 
   .right-cntr {
-    width: 50% !important;
+    width: 70% !important;
     display: flex;
     justify-content: flex-start;
-    /* background-color: red; */
   }
 
   .main-price-cnt {
@@ -50,33 +49,34 @@
 .main-contr {
   display: flex;
   width: 90%;
-  /* background-color: green; */
 }
 
 .left-contr {
-  /* background-color: red; */
   width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid #EAEAEF;
+  margin: -0.1em !important;
 }
 
 .card-contr {
   margin: 1.5em;
   background: #ffffff;
   padding: 1em;
-  width: 75%;
+  width: 85%;
   display: flex;
+  /* background-color: #4CAF50; */
 }
 
 .img-cntr {
-  width: 20%;
-  margin: 0.5em;
+  width: 18%;
+  margin: 0.2em 0.5em 0.2em 0.5em;
 }
 
 .contents {
-  margin-top: 4em;
+  margin-top: 2.5em;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -85,8 +85,9 @@
 
 }
 
-.price {
-  margin-right: 1em !important;
+hr{
+margin: 0;
+  border: 1px solid #EAEAEF
 }
 
 .text-price {
@@ -136,6 +137,7 @@
 
 .quantity-cntr {
   display: flex;
+  margin-bottom: 1.5em;
 }
 
 .quantity-count {
@@ -158,8 +160,9 @@
 
 
 .right-cntr {
-  width: 40%;
-  height: 40%;
+  width: 50%;
+margin: 0.4% 0 0 3% !important;
+
 }
 
 
@@ -182,14 +185,16 @@
 
 .minus{
   color:red;
+  cursor: pointer;
 }
 
 .plus{
   color: #4CAF50;
+  cursor: pointer;
 }
 
 .remove {
-  width: 6.5em;
+  width: 7.5em;
   height: 2.5em;
   background: rgba(74, 152, 43, 0.07);
   border: 0.5px solid #6CBF3C;
@@ -198,13 +203,14 @@
   font-weight: 500;
   font-size: 0.7em;
   margin-top: 6%;
+  cursor: pointer;
+  margin-left: 60% !important;
 }
 
 
 
 .main-price-cntr {
   margin-top: 1.2em;
-  /* background-color: green; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -214,6 +220,7 @@
   padding: 1em;
   background-color: #ffffff;
   width: 50%;
+  height: 20vh;
 }
 
 .button-buy {
@@ -224,9 +231,40 @@
   outline: 0;
   background: #6CBF3C;
   color: white;
+  cursor: pointer;
 }
 
 .price-content{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between !important;
+  
+}
+
+.price {
+  margin-right: 1em !important;
+  font-size: 1.1em;
+  font-family: 'Roboto';
+  margin-top: -0.2em;
+}
+
+.product{
+  font-size: 1em;
+  font-family: 'Roboto';
+  /* margin-top: -0.2em; */
+}
+
+.product2{
+  font-size: 1em;
+  font-family: 'Roboto';
+  /* margin-top: -0.3em; */
+}
+
+.order{
+  font-size: 1.1em;
+  font-family: 'Roboto';
+  margin-top: 0.6em;
+}
+
+.total{
+  margin-top: 0.7em;
 }

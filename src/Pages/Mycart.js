@@ -1,17 +1,17 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Mycart.css";
 import Images from "../Assests/images/boat rockerz.jpg";
 
 export default function Mycart() {
-  const [data, setData] = useState([1, 2, 3, 4, 5]);
+  // const [data, setData] = useState([1, 2, 3, 4, 5]);
   let [productData, setProductData] = useState([
     {
       id: 1,
       productname:
         "boat rockerz 450 - bluetooth wireless on ear headphone with mic",
       price: "250",
-      actualprice: "1000",
-      discount: "20",
+      actualprice: "1010",
+      discount: "53",
       quantity: 1,
     },
     {
@@ -19,8 +19,8 @@ export default function Mycart() {
       productname:
         "boat rockerz 450 - bluetooth wireless on ear headphone with mic",
       price: "250",
-      actualprice: "1000",
-      discount: "20",
+      actualprice: "1010",
+      discount: "53",
       quantity: 1,
     },
     {
@@ -28,8 +28,8 @@ export default function Mycart() {
       productname:
         "boat rockerz 450 - bluetooth wireless on ear headphone with mic",
       price: "250",
-      actualprice: "1000",
-      discount: "20",
+      actualprice: "1010",
+      discount: "53",
       quantity: 1,
     },
     {
@@ -37,8 +37,8 @@ export default function Mycart() {
       productname:
         "boat rockerz 450 - bluetooth wireless on ear headphone with mic",
       price: "250",
-      actualprice: "1000",
-      discount: "20",
+      actualprice: "1010",
+      discount: "53",
       quantity: 1,
     },
     {
@@ -46,8 +46,8 @@ export default function Mycart() {
       productname:
         "boat rockerz 450 - bluetooth wireless on ear headphone with mic",
       price: "250",
-      actualprice: "1000",
-      discount: "20",
+      actualprice: "1010",
+      discount: "53",
       quantity: 1,
     },
     {
@@ -55,8 +55,8 @@ export default function Mycart() {
       productname:
         "boat rockerz 450 - bluetooth wireless on ear headphone with mic",
       price: "250",
-      actualprice: "1000",
-      discount: "20",
+      actualprice: "1010",
+      discount: "53",
       quantity: 1,
     },
     {
@@ -64,8 +64,8 @@ export default function Mycart() {
       productname:
         "boat rockerz 450 - bluetooth wireless on ear headphone with mic",
       price: "250",
-      actualprice: "1000",
-      discount: "20",
+      actualprice: "1010",
+      discount: "53",
       quantity: 1,
     },
     {
@@ -73,8 +73,8 @@ export default function Mycart() {
       productname:
         "boat rockerz 450 - bluetooth wireless on ear headphone with mic",
       price: "250",
-      actualprice: "1000",
-      discount: "20",
+      actualprice: "1010",
+      discount: "53",
       quantity: 1,
     },
     {
@@ -82,25 +82,25 @@ export default function Mycart() {
       productname:
         "boat rockerz 450 - bluetooth wireless on ear headphone with mic",
       price: "250",
-      actualprice: "1000",
-      discount: "20",
+      actualprice: "1010",
+      discount: "53",
       quantity: 1,
     },
   ]);
-  const [total,setTotal]=useState(0)
+  const [total, setTotal] = useState(0);
 
-  useEffect(()=>{
-    totalPriceCalculator()
-  },[])
+  useEffect(() => {
+    totalPriceCalculator();
+  }, []);
 
   const minusHandler = (id) => {
     let data = [...productData];
     data.map((item) => {
-      if (item.id == id && item.quantity !== 0) {
+      if (item.id == id && item.quantity !== 1) {
         item.quantity = item.quantity - 1;
       }
     });
-    totalPriceCalculator()
+    totalPriceCalculator();
     setProductData([...data]);
   };
 
@@ -111,34 +111,31 @@ export default function Mycart() {
         item.quantity = item.quantity + 1;
       }
     });
-    totalPriceCalculator()
+    totalPriceCalculator();
     setProductData([...data]);
   };
 
-  const totalPriceCalculator=()=>{
-  //   let data=[...productData]
-  //   let d=[]
-  //  d= data.map((item,index)=>{
-  //     return item.quantity * item.price
-  //   })
+  const totalPriceCalculator = () => {
+      let data=[...productData]
+      let d=[]
+     d= data.map((item,index)=>{
+        return item.quantity * item.price
+      })
+      sumCalculator(d)
+  };
 
-  //   sumCalculator(d)
-  }
-
-  const sumCalculator=(data)=>{
+  const sumCalculator = (data) => {
     const sum = data.reduce((partialSum, a) => partialSum + a, 0);
-    setTotal(sum)
+    setTotal(sum);
+  };
 
-  }
-
-  const removeHandler=(id)=>{
-    let data=[...productData]
-    let updated=data.filter((item,index)=>{
-      return item.id!==id
-    })
-    setProductData(updated)
-
-  }
+  const removeHandler = (id) => {
+    let data = [...productData];
+    let updated = data.filter((item, index) => {
+      return item.id !== id;
+    });
+    setProductData(updated);
+  };
   return (
     <div className="main-contr">
       <div className="left-contr">
@@ -183,7 +180,14 @@ export default function Mycart() {
                       </span>
                     </div>
                   </div>
-                  <button className="remove" onClick={()=>{removeHandler(item?.id)}}>REMOVE</button>
+                  <button
+                    className="remove"
+                    onClick={() => {
+                      removeHandler(item?.id);
+                    }}
+                  >
+                    REMOVE
+                  </button>
                 </div>
               </div>
             </div>
@@ -196,21 +200,20 @@ export default function Mycart() {
             <div>
               <h3 className="price">Price Details</h3>
             </div>
-            {/* <hr /> */}
+            <hr />
             <div className="price-content">
               <p className="product">Product Charges</p>
               <p>{total}</p>
-            </div> 
+            </div>
             <div className="price-content">
-            <p className="product">Delivery Charges</p>
-            <p>20</p>
+              <p className="product2">Delivery Charges</p>
+              <p>20</p>
             </div>
-            {/* <hr /> */}
-            <div  className="price-content">
+            <hr />
+            <div className="price-content">
               <h3 className="order">Order Total</h3>
-              <p>{total+20}</p>
+              <p className="total">{total + 20}</p>
             </div>
-           
           </div>
         </div>
         <button className="button-buy">PROCEED TO BUY</button>
