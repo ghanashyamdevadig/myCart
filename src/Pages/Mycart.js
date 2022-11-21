@@ -99,33 +99,37 @@ export default function Mycart() {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    totalPriceCalculator();
+    totalPriceCalculator(productData);
   }, []);
 
-  const minusHandler = (id) => {
+  const minusHandler = async(id) => {
     let data = [...productData];
-    data.map((item) => {
+    await data.map((item) => {
       if (item.id == id && item.quantity !== 1) {
         item.quantity = item.quantity - 1;
       }
     });
-    totalPriceCalculator();
+    totalPriceCalculator(data);
     setProductData([...data]);
   };
 
-  const addHandler = (id) => {
+  const addHandler = async(id) => {
     let data = [...productData];
     data.map((item) => {
       if (item.id == id && item.quantity !== 0) {
         item.quantity = item.quantity + 1;
       }
     });
-    totalPriceCalculator();
+    
     setProductData([...data]);
+    await totalPriceCalculator(data);
   };
 
-  const totalPriceCalculator = () => {
-      let data=[...productData]
+
+
+  const totalPriceCalculator = (updated) => {
+
+      let data=[...updated]
       let d=[]
      d= data.map((item,index)=>{
         return item.quantity * item.price
@@ -144,7 +148,7 @@ export default function Mycart() {
       return item.id !== id;
     });
     setProductData(updated);
-    totalPriceCalculator()
+    totalPriceCalculator(updated)
   };
   return (
   <div>
